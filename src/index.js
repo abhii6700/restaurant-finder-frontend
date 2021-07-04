@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router} from 'react-router-dom'
+import { RestaurantContextProvider } from "./context/RestaurantContext";
 
 ReactDOM.render(
   <React.StrictMode>
+    <RestaurantContextProvider>
+    <Router>
     <App />
+    </Router>
+    </RestaurantContextProvider>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
